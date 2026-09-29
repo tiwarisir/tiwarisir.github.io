@@ -176,14 +176,12 @@
                     <span>↗</span>
                 </a>
 
-                <a
-                    href="Zerotobillionaire-CV.pdf"
-                    class="hero-btn secondary"
-                    download
-                >
-                    VIEW RESUME
-                    <span>↓</span>
-                </a>
+                <a href="Zerotobillionaire-CV.pdf"
+   class="hero-btn secondary"
+   target="_blank"
+   rel="noopener noreferrer">
+   VIEW RESUME <span>↗</span>
+</a>
 
             </div>
 
@@ -1199,7 +1197,25 @@
   </div>
 </footer>
 
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.querySelector(".nav-links");
+  const navItems = document.querySelectorAll(".nav-link");
 
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("menu-open");
+      navToggle.classList.toggle("active");
+    });
+  }
+
+  navItems.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("menu-open");
+      navToggle.classList.remove("active");
+    });
+  });
+</script>
   <!-- AOS JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>

@@ -1650,7 +1650,151 @@ footer {
 /* =========================================================
    PROFESSIONAL EXPERIENCE
 ========================================================= */
+/* =========================
+   MOBILE NAVIGATION FIX
+========================= */
 
+@media (max-width: 1000px) {
+
+  .system-nav {
+    padding: 10px 16px;
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .nav-brand {
+    min-width: 0;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    background: rgba(3, 8, 6, 0.98);
+    border-bottom: 1px solid rgba(101, 255, 186, 0.15);
+
+    padding: 10px 16px 16px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+
+    box-sizing: border-box;
+  }
+/* =========================
+   MOBILE PROJECT FIX
+========================= */
+
+@media (max-width: 700px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .projects-section {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .projects-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .infra-project {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .project-architecture {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding-bottom: 10px;
+  }
+
+  .aws-architecture {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding-bottom: 10px;
+  }
+
+  .project-bottom {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+}
+  .nav-links.menu-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    justify-content: flex-start;
+
+    border-bottom: 1px solid rgba(101, 255, 186, 0.06);
+  }
+
+  .nav-status {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
 .experience-section {
 
   position: relative;
